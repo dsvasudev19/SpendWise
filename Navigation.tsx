@@ -3,6 +3,7 @@ import {View, Text} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import BottomBar from './src/BottomBar';
+import Login from './src/screens/Login';
 
 function HomeScreen() {
   return (
@@ -18,10 +19,11 @@ function Navigation() {
   return (
     <NavigationContainer>
       <Stack.Navigator
-        initialRouteName="BottomTab"
+        initialRouteName="login"
         screenOptions={{headerShown: false}}>
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="BottomTab" component={BottomBar} />
+        <Stack.Screen name='login' component={Login} />
       </Stack.Navigator>
     </NavigationContainer>
   );
